@@ -1,21 +1,16 @@
 PODS:
-  - AFQuark (0.0.7)
+  - AFQuark (0.0.8)
 
 DEPENDENCIES:
-  - AFQuark (from `https://github.com/laurent68k/AFQuark.git`)
+  - AFQuark (from `./../../AFQuark/`)
 
 EXTERNAL SOURCES:
   AFQuark:
-    :git: https://github.com/laurent68k/AFQuark.git
-
-CHECKOUT OPTIONS:
-  AFQuark:
-    :commit: ccd555e6fa565bc876ad58c016459f4c7f5523e1
-    :git: https://github.com/laurent68k/AFQuark.git
+    :path: "./../../AFQuark/"
 
 SPEC CHECKSUMS:
-  AFQuark: 346cb64462561df6a0275d51f768b9a6019b6677
+  AFQuark: cb27b2fbfe60aab473366cff47c90e8dc23169f0
 
-PODFILE CHECKSUM: ad5acae2dda221c70d67f14a734cb74d797da9de
+PODFILE CHECKSUM: 4224257d4cb1a9125a14b004afa448b86716a772
 
 COCOAPODS: 1.5.0

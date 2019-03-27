@@ -6,6 +6,11 @@ target 'AFQuarkApp' do
   use_frameworks!
 
   # Pods for AFQuarkApp
-  pod 'AFQuark', :git => 'https://github.com/laurent68k/AFQuark.git'
+  
+  # Real use: Seek the Git repository from Github
+  #pod 'AFQuark', :git => 'https://github.com/laurent68k/AFQuark.git'
+  
+  # Dev: Seek the path seeking the framework
+  pod 'AFQuark', :path => './../../AFQuark/'
 
 end
