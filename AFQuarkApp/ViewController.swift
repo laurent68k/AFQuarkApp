@@ -16,6 +16,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        print("Today asDateTimeLocalized: \(Date().asDateTimeLocalized)")
+        print("Today asDateLocalized: \(Date().asDateLocalized)")
+        print("Today asShortDateTimeLocalized: \(Date().asShortDateTimeLocalized)")
+        
+        print("Today getCurrentDateTime: \(Date().asLongDateTimeLocalized)")
+
+    }
+    
     @IBAction func alertOk(_ sender: Any) {
         
         AFAlert.okAlert(self, title: "Quark", message: "Alert box with OK button", completionHandler: {
@@ -52,8 +64,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         actions.append( UIAlertAction(title: "Button 2", style: .default, handler: { _ in print("Button 2 pressed")}))
         actions.append( UIAlertAction(title: "Button 3", style: .default, handler: { _ in print("Button 3 pressed")}))
         
-        actions.append( UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in print("Button 3 pressed")}))
-
         AFAlert.alert(self, title: "Quark", message: "Alert with multiple buttons", withActions: actions)
     }
     

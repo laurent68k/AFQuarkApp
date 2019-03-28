@@ -17,6 +17,8 @@
 
 /* Begin PBXFileReference section */
 		240BFDF81D8EC19416BC509F /* Pods-AFQuarkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFQuarkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFQuarkApp/Pods-AFQuarkApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0FFFEB224D46C100384DA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4D0FFFEC224D46C100384DA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4D3741EA224ABCE400FBCD0D /* AFQuarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFQuarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D3741EF224ABCE400FBCD0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D3741F2224ABCE400FBCD0D /* Base */,
+				4D0FFFEB224D46C100384DA1 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D3741F7224ABCE400FBCD0D /* Base */,
+				4D0FFFEC224D46C100384DA1 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -235,6 +239,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -296,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "alert OK/Cancel"; ObjectID = "8eb-d0-8Nk"; */
+"8eb-d0-8Nk.normalTitle" = "alert OK/Cancel";
+
+/* Class = "UIViewController"; title = "Quark Cocoapod"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Quark Cocoapod";
+
+/* Class = "UIBarButtonItem"; title = "sheet"; ObjectID = "Bxr-Su-n73"; */
+"Bxr-Su-n73.title" = "sheet";
+
+/* Class = "UIButton"; normalTitle = "Alert Sheet Multiple"; ObjectID = "QNg-Gj-gbu"; */
+"QNg-Gj-gbu.normalTitle" = "Alert Sheet Multiple";
+
+/* Class = "UIButton"; normalTitle = "alert OK"; ObjectID = "WAc-2P-RYi"; */
+"WAc-2P-RYi.normalTitle" = "alert OK";
+
+/* Class = "UIButton"; normalTitle = "Alart as Toast"; ObjectID = "gfK-Ay-YCp"; */
+"gfK-Ay-YCp.normalTitle" = "Alart as Toast";
+
+/* Class = "UIButton"; normalTitle = "Alert multiple"; ObjectID = "nDV-Rf-S2H"; */
+"nDV-Rf-S2H.normalTitle" = "Alert multiple";
