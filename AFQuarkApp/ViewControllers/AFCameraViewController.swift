@@ -40,6 +40,7 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
             if let data = image.jpegData(compressionQuality: 1.0)  {
             
                 var imageUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
+                let localDocument = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:true)
                 
                 let file = "photo.jpg"
                 
@@ -47,7 +48,7 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
                 
                 //print("writing from: \(String(describing: documentDirectory?.absoluteString))")
                 
-                if let imageUrl = imageUrl {
+                if let imageUrl = imageUrl, let localDocument =  localDocument {
                     
                     do {
                         try data.write(to: imageUrl)
@@ -59,13 +60,13 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
                     //  testing
                     let containerURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)
                     let documentDirectoryURL = containerURL!.appendingPathComponent("Documents")
-                    let documentURL = documentDirectoryURL.appendingPathComponent("myFile.txt")
-                    let text = String("test message")
+                    let documentURL = documentDirectoryURL.appendingPathComponent("Readme.txt")
+                    let text = String("Your photo has been uploaded")
                     try? text.write(to: documentURL, atomically:true, encoding:String.Encoding.utf8)
                     //  ---
                     
                     
-                    iCloud.synchronize(fromSource: imageUrl)
+                    iCloud.synchronize(fromSource: localDocument)
                     
                     AFAlert.okAlert(self, title: "iCloud", message: "iCloud share done")
                 }
