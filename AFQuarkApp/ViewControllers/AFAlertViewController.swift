@@ -9,7 +9,7 @@
 import UIKit
 import AFQuark
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class AFAlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,38 +93,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         AFAlert.alertSheet(self, title: "Quark", message: "Alert Sheet with multiple buttons", forButton: sender, withActions: actions)
     }
     
-    @IBAction func cameraShoot(_ sender: Any) {
-        
-        AFCamera.shoot(self)
-    }
-    
-    @IBAction func shareAction(_ sender: Any) {
-        
-        var images: [UIImage] = []
-        
-        if let image = UIImage(named: "photo") {
-            
-            images.append(image)
-        }
-        
-        AFCamera.shareImages(self, anchorObject: sender, images: images)
-    }
-}
 
-extension ViewController  {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        
-        //Dismiss the UIImagePicker after selection
-        picker.dismiss(animated: true, completion: {
-            
-        })
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
 }

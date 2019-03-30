@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4D3741EE224ABCE400FBCD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */; };
-		4D3741F0224ABCE400FBCD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741EF224ABCE400FBCD0D /* ViewController.swift */; };
+		4D3741F0224ABCE400FBCD0D /* AFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */; };
 		4D3741F3224ABCE400FBCD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F1224ABCE400FBCD0D /* Main.storyboard */; };
 		4D3741F5224ABCE400FBCD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F4224ABCE400FBCD0D /* Assets.xcassets */; };
 		4D3741F8224ABCE400FBCD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F6224ABCE400FBCD0D /* LaunchScreen.storyboard */; };
 		4D374216224AD8B500FBCD0D /* Pods_AFQuarkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D374215224AD8B500FBCD0D /* Pods_AFQuarkApp.framework */; };
+		4DF775CE224F724B0037A94D /* AFCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF775CD224F724B0037A94D /* AFCameraViewController.swift */; };
+		4DF775D0224F748A0037A94D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF775CF224F748A0037A94D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,16 @@
 		4D0FFFEC224D46C100384DA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4D3741EA224ABCE400FBCD0D /* AFQuarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFQuarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D3741EF224ABCE400FBCD0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFAlertViewController.swift; sourceTree = "<group>"; };
 		4D3741F2224ABCE400FBCD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D3741F4224ABCE400FBCD0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D3741F7224ABCE400FBCD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3741F9224ABCE400FBCD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D374211224AC1A500FBCD0D /* AFQuark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFQuark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D374215224AD8B500FBCD0D /* Pods_AFQuarkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AFQuarkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF775CD224F724B0037A94D /* AFCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCameraViewController.swift; sourceTree = "<group>"; };
+		4DF775CF224F748A0037A94D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4DF775D1224F7B240037A94D /* AFQuarkApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AFQuarkApp.entitlements; sourceTree = "<group>"; };
 		5CEDF98FE549484B2B42F285 /* Pods_AFQuarkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFQuarkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5378FBCA4F37CFFD245D30 /* Pods-AFQuarkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFQuarkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFQuarkApp/Pods-AFQuarkApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +70,10 @@
 		4D3741EC224ABCE400FBCD0D /* AFQuarkApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DF775D1224F7B240037A94D /* AFQuarkApp.entitlements */,
+				4DF775D2224F7B420037A94D /* ViewControllers */,
+				4DF775CF224F748A0037A94D /* MainViewController.swift */,
 				4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */,
-				4D3741EF224ABCE400FBCD0D /* ViewController.swift */,
 				4D3741F1224ABCE400FBCD0D /* Main.storyboard */,
 				4D3741F4224ABCE400FBCD0D /* Assets.xcassets */,
 				4D3741F6224ABCE400FBCD0D /* LaunchScreen.storyboard */,
@@ -83,6 +90,15 @@
 				5CEDF98FE549484B2B42F285 /* Pods_AFQuarkApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DF775D2224F7B420037A94D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */,
+				4DF775CD224F724B0037A94D /* AFCameraViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D4E3E75AD602112581866771 /* Pods */ = {
@@ -128,6 +144,14 @@
 				TargetAttributes = {
 					4D3741E9224ABCE400FBCD0D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +162,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 4D3741E1224ABCE400FBCD0D;
 			productRefGroup = 4D3741EB224ABCE400FBCD0D /* Products */;
@@ -206,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3741F0224ABCE400FBCD0D /* ViewController.swift in Sources */,
+				4D3741F0224ABCE400FBCD0D /* AFAlertViewController.swift in Sources */,
+				4DF775CE224F724B0037A94D /* AFCameraViewController.swift in Sources */,
 				4D3741EE224ABCE400FBCD0D /* AppDelegate.swift in Sources */,
+				4DF775D0224F748A0037A94D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +385,16 @@
 			baseConfigurationReference = 240BFDF81D8EC19416BC509F /* Pods-AFQuarkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AFQuarkApp/AFQuarkApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T32WF6U53;
 				INFOPLIST_FILE = AFQuarkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.AFQuarkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.quark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,14 +406,16 @@
 			baseConfigurationReference = BA5378FBCA4F37CFFD245D30 /* Pods-AFQuarkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AFQuarkApp/AFQuarkApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T32WF6U53;
 				INFOPLIST_FILE = AFQuarkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.AFQuarkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.quark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
