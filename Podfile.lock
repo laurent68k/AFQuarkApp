@@ -1,5 +1,5 @@
 PODS:
-  - AFQuark (0.0.9)
+  - AFQuark (0.0.10)
 
 DEPENDENCIES:
   - AFQuark (from `./../../AFQuark/`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "./../../AFQuark/"
 
 SPEC CHECKSUMS:
-  AFQuark: a32729679ee9225c00f0d8d69eb7a34ffe356c34
+  AFQuark: 2ab88ce13b2fb4053d14aefa30a2823adbc9481d
 
 PODFILE CHECKSUM: 4224257d4cb1a9125a14b004afa448b86716a772
 

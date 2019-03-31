@@ -22,8 +22,8 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func cameraShoot(_ sender: Any) {
-        
-        AFCamera.shoot(self)
+            
+        AFCamera.capture(self)
     }
     
     @IBAction func iCloudAction(_ sender: Any) {
@@ -79,11 +79,11 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if let image = self.imageView.image {
 
-            AFCamera.shareImages(self, anchorObject: sender, images: [image])
+            AFShare.shareImages(self, anchorObject: sender, images: [image])
         }
         else if let image = UIImage(named: "photo") {
             
-            AFCamera.shareImages(self, anchorObject: sender, images: [image])
+            AFShare.shareImages(self, anchorObject: sender, images: [image])
         }        
     }
 }
