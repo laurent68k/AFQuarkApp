@@ -1,5 +1,5 @@
 //
-//  FACameraViewController.swift
+//  CameraViewController.swift
 //  AFQuarkApp
 //
 //  Created by Laurent Favard on 30/03/2019.
@@ -9,11 +9,28 @@
 import UIKit
 import AFQuark
 
-class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var zoomableScrollView: AFZoomableScrollView!
+    
     private let iCloud = AFiCloud.shared
+    
+    var photo: UIImage? {
+        
+        set {
+            if let image = newValue {
+                
+                self.zoomableScrollView.display(image: image)
+            }
+        }
+        get {
+            if let imageView = self.zoomableScrollView.contentView as? UIImageView {
+                
+                return imageView.image
+            }
+            return nil
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +45,7 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func iCloudAction(_ sender: Any) {
         
-        var image = self.imageView.image
+        var image = self.photo
         
         if image == nil {
             
@@ -58,17 +75,27 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
                     }
                     
                     //  testing
-                    let containerURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)
-                    let documentDirectoryURL = containerURL!.appendingPathComponent("Documents")
-                    let documentURL = documentDirectoryURL.appendingPathComponent("Readme.txt")
-                    let text = String("Your photo has been uploaded")
-                    try? text.write(to: documentURL, atomically:true, encoding:String.Encoding.utf8)
-                    //  ---
+                    if let cloud = iCloud.remoteCloudUrl() {
+                        
+                        let documentURL = cloud.appendingPathComponent("Readme.txt")
+                        let text = String("Your photo has been uploaded")
+                        
+                        do {
+                            try text.write(to: documentURL, atomically:true, encoding:String.Encoding.utf8)
+                        }
+                        catch {
+                            print(error.localizedDescription)
+                        }
+                    }
                     
                     
-                    iCloud.synchronize(fromSource: localDocument)
-                    
-                    AFAlert.okAlert(self, title: "iCloud", message: "iCloud share done")
+                    if iCloud.synchronize(fromSourceFolder: localDocument, to: "Photo") {
+                        
+                        AFAlert.okAlert(self, title: "iCloud", message: "iCloud share done")
+                    }
+                    else {
+                        AFAlert.okAlert(self, title: "iCloud", message: "iCloud share failed")
+                    }
                 }
             }
         }
@@ -77,7 +104,7 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func shareAction(_ sender: Any) {
         
-        if let image = self.imageView.image {
+        if let image = self.photo {
 
             AFShare.shareImages(self, anchorObject: sender, images: [image])
         }
@@ -89,13 +116,13 @@ class AFCameraViewController: UIViewController, UIImagePickerControllerDelegate,
 }
 
 
-extension AFCameraViewController  {
+extension CameraViewController  {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let editedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
-            self.imageView.image = editedImage
+            self.photo = editedImage
         }
         
         //Dismiss the UIImagePicker after selection

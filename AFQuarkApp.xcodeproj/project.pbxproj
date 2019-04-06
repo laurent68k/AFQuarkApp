@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D36B1462258AC59003BB6AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36B1452258AC59003BB6AF /* AboutViewController.swift */; };
 		4D3741EE224ABCE400FBCD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */; };
-		4D3741F0224ABCE400FBCD0D /* AFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */; };
+		4D3741F0224ABCE400FBCD0D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3741EF224ABCE400FBCD0D /* AlertViewController.swift */; };
 		4D3741F3224ABCE400FBCD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F1224ABCE400FBCD0D /* Main.storyboard */; };
 		4D3741F5224ABCE400FBCD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F4224ABCE400FBCD0D /* Assets.xcassets */; };
 		4D3741F8224ABCE400FBCD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3741F6224ABCE400FBCD0D /* LaunchScreen.storyboard */; };
 		4D374216224AD8B500FBCD0D /* Pods_AFQuarkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D374215224AD8B500FBCD0D /* Pods_AFQuarkApp.framework */; };
-		4DF775CE224F724B0037A94D /* AFCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF775CD224F724B0037A94D /* AFCameraViewController.swift */; };
+		4DF775CE224F724B0037A94D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF775CD224F724B0037A94D /* CameraViewController.swift */; };
 		4DF775D0224F748A0037A94D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF775CF224F748A0037A94D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,16 +22,17 @@
 		240BFDF81D8EC19416BC509F /* Pods-AFQuarkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFQuarkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFQuarkApp/Pods-AFQuarkApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0FFFEB224D46C100384DA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4D0FFFEC224D46C100384DA1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4D36B1452258AC59003BB6AF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4D3741EA224ABCE400FBCD0D /* AFQuarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFQuarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3741ED224ABCE400FBCD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFAlertViewController.swift; sourceTree = "<group>"; };
+		4D3741EF224ABCE400FBCD0D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4D3741F2224ABCE400FBCD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D3741F4224ABCE400FBCD0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D3741F7224ABCE400FBCD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3741F9224ABCE400FBCD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D374211224AC1A500FBCD0D /* AFQuark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFQuark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D374215224AD8B500FBCD0D /* Pods_AFQuarkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AFQuarkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DF775CD224F724B0037A94D /* AFCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCameraViewController.swift; sourceTree = "<group>"; };
+		4DF775CD224F724B0037A94D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4DF775CF224F748A0037A94D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4DF775D1224F7B240037A94D /* AFQuarkApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AFQuarkApp.entitlements; sourceTree = "<group>"; };
 		5CEDF98FE549484B2B42F285 /* Pods_AFQuarkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFQuarkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +97,9 @@
 		4DF775D2224F7B420037A94D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D3741EF224ABCE400FBCD0D /* AFAlertViewController.swift */,
-				4DF775CD224F724B0037A94D /* AFCameraViewController.swift */,
+				4D36B1452258AC59003BB6AF /* AboutViewController.swift */,
+				4D3741EF224ABCE400FBCD0D /* AlertViewController.swift */,
+				4DF775CD224F724B0037A94D /* CameraViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,8 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3741F0224ABCE400FBCD0D /* AFAlertViewController.swift in Sources */,
-				4DF775CE224F724B0037A94D /* AFCameraViewController.swift in Sources */,
+				4D3741F0224ABCE400FBCD0D /* AlertViewController.swift in Sources */,
+				4D36B1462258AC59003BB6AF /* AboutViewController.swift in Sources */,
+				4DF775CE224F724B0037A94D /* CameraViewController.swift in Sources */,
 				4D3741EE224ABCE400FBCD0D /* AppDelegate.swift in Sources */,
 				4DF775D0224F748A0037A94D /* MainViewController.swift in Sources */,
 			);

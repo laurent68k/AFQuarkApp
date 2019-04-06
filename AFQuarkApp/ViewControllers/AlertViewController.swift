@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AlertViewController.swift
 //  AFQuarkApp
 //
 //  Created by Laurent Favard on 26/03/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import AFQuark
 
-class AFAlertViewController: UIViewController {
+class AlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

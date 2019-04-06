@@ -99,7 +99,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6LS-bQ-Uyx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quark App" id="jJl-Db-HVs"/>
+                    <navigationItem key="navigationItem" title="Quark App" id="jJl-Db-HVs">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="9LO-gN-eqQ">
+                            <connections>
+                                <segue destination="SU5-bn-bMx" kind="presentation" modalTransitionStyle="flipHorizontal" id="cQq-VV-PVY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="SK3-x7-e6h" id="CDv-hS-QJD"/>
                     </connections>
@@ -108,10 +114,47 @@
             </objects>
             <point key="canvasLocation" x="-1308.75" y="129.92957746478874"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="wdG-DU-Je0">
+            <objects>
+                <viewController id="SU5-bn-bMx" customClass="AboutViewController" customModule="AFQuarkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xyd-fT-OtV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg4-lX-bKM">
+                                <rect key="frame" x="131.5" y="273.5" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc4-R5-fQ6">
+                                <rect key="frame" x="137" y="358.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eg4-lX-bKM" firstAttribute="centerX" secondItem="xyd-fT-OtV" secondAttribute="centerX" id="SwV-h7-mA7"/>
+                            <constraint firstItem="Qc4-R5-fQ6" firstAttribute="top" secondItem="eg4-lX-bKM" secondAttribute="bottom" constant="64" id="dpT-jw-caT"/>
+                            <constraint firstItem="Qc4-R5-fQ6" firstAttribute="centerX" secondItem="xyd-fT-OtV" secondAttribute="centerX" id="hXb-fh-TdQ"/>
+                            <constraint firstItem="eg4-lX-bKM" firstAttribute="centerY" secondItem="xyd-fT-OtV" secondAttribute="centerY" id="olH-QR-wSE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WSu-Nf-5ne"/>
+                    </view>
+                    <connections>
+                        <outlet property="rateButton" destination="Qc4-R5-fQ6" id="Ek2-04-vOt"/>
+                        <outlet property="versionTextLabel" destination="eg4-lX-bKM" id="wDF-Jh-JKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l4-bq-aem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="-1196"/>
+        </scene>
         <!--Alert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Alert" id="BYZ-38-t0r" customClass="AFAlertViewController" customModule="AFQuarkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Alert" id="BYZ-38-t0r" customClass="AlertViewController" customModule="AFQuarkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,12 +226,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478" y="-447"/>
+            <point key="canvasLocation" x="-186" y="-464"/>
         </scene>
         <!--Camera-->
         <scene sceneID="QKN-KX-Oz4">
             <objects>
-                <viewController title="Camera" id="TpT-ia-cpZ" customClass="AFCameraViewController" customModule="AFQuarkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Camera" id="TpT-ia-cpZ" customClass="CameraViewController" customModule="AFQuarkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G0l-Ok-ftH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,16 +265,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO7-To-lnu">
                                 <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-eq-MfT">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gp-QV-pYZ" customClass="AFZoomableScrollView" customModule="AFQuark">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                                    </imageView>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cxc-eq-MfT" secondAttribute="trailing" id="1ha-mO-JhS"/>
-                                    <constraint firstAttribute="bottom" secondItem="cxc-eq-MfT" secondAttribute="bottom" id="IWt-P2-HNo"/>
-                                    <constraint firstItem="cxc-eq-MfT" firstAttribute="leading" secondItem="JO7-To-lnu" secondAttribute="leading" id="NS6-kM-hGz"/>
-                                    <constraint firstItem="cxc-eq-MfT" firstAttribute="top" secondItem="JO7-To-lnu" secondAttribute="top" id="RRs-SJ-WWa"/>
+                                    <constraint firstItem="6gp-QV-pYZ" firstAttribute="leading" secondItem="JO7-To-lnu" secondAttribute="leading" id="1q7-5R-V4n"/>
+                                    <constraint firstAttribute="trailing" secondItem="6gp-QV-pYZ" secondAttribute="trailing" id="oHR-yB-dHa"/>
+                                    <constraint firstItem="6gp-QV-pYZ" firstAttribute="top" secondItem="JO7-To-lnu" secondAttribute="top" id="oit-Ti-Fwa"/>
+                                    <constraint firstAttribute="bottom" secondItem="6gp-QV-pYZ" secondAttribute="bottom" id="qur-aG-CSq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -248,12 +291,12 @@
                         <viewLayoutGuide key="safeArea" id="dAG-Ub-OuS"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="cxc-eq-MfT" id="bRb-xV-9Ah"/>
+                        <outlet property="zoomableScrollView" destination="6gp-QV-pYZ" id="aPX-zC-67o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HZ-kt-naE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.25" y="-58.098591549295776"/>
+            <point key="canvasLocation" x="521.25" y="-111.97183098591549"/>
         </scene>
     </scenes>
     <resources>
